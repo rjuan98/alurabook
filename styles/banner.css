@@ -1,0 +1,116 @@
+.banner{
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+
+
+}
+
+.banner_titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner_texto{
+    font-weight: 500;
+    margin: 1em 0;
+
+}
+
+.banner_pesquisa{
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+
+}
+
+.banner_pesquisa::placeholder{
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: var(--branco);
+    background: url("../img/Vector.png") no-repeat;
+    background-position: 1em;
+    padding-left: 2em;
+}
+
+@media screen and (min-width: 1024px){
+    .banner_titulo{
+        font-size: 36px;
+    }
+    .banner_pesquisa{
+        width: 50%;
+    }
+    .banner_pesquisa::placeholder{
+        background-position: 7em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .carrossel_titulo{
+        font-size: 26px;
+        width: 100vw;
+        height: 1.5em;
+
+    }
+    .swiper-pagination{
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper{
+        width: 60%;
+
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: block !important;
+        top: 60%;
+        
+    }
+
+     .carrossel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 40%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .banner_pesquisa{
+        width: 35%;
+    }
+
+    .banner_pesquisa::placeholder{
+        background-position: 12em;
+    }
+
+    .banner{
+        pad: 6em 0;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .banner_pesquisa:hover,
+    .banner_pesquisa:focus {
+        background-color: var(--branco);
+        color: var(--azul);
+        border-color: var(--azul);
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        outline: none;
+        transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    }
+    .banner_pesquisa:hover::placeholder,
+    .banner_pesquisa:focus::placeholder {
+        color: var(--azul);
+        opacity: 0.7;
+        transition: color 0.2s, opacity 0.2s;
+    }
+}
